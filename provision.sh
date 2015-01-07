@@ -10,4 +10,4 @@ sudo apt-get -y install php5-gd
 sudo service php5-fpm restart
 
 sudo apt-get -y install php5-mysql mysql-server mysql-client php5-curl
-sudo apt-get -y install nodejs npm
+sudo apt-get -y install nodejs npm nodejs-legacy ruby-sass
