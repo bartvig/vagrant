@@ -15,3 +15,4 @@ sudo apt-get -y install ruby-full
 
 sudo gem install sass
 sudo gem install compass
+sudo gem install bootstrap-sass
