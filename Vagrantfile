@@ -39,8 +39,9 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  #config.vm.synced_folder "./sites", "/var/www", :nfs => true
-  config.sshfs.paths = { "/var/www" => "/home/morten/vagrant/standard/sites" }
+  #config.vm.synced_folder "./sites", "/var/www", :nfs => true, :owner => "www-data"
+  config.vm.synced_folder "./sites", "/var/www", :nfs => true #, :owner => "www-data"
+  #config.sshfs.paths = { "/var/www" => "/home/morten/vagrant/standard/sites" }
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -55,7 +56,7 @@ Vagrant.configure(2) do |config|
   # end
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
-    vb.cpus = 2
+    vb.cpus = 8
   end
   #
   # View the documentation for the provider you are using for more
